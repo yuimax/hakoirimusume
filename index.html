@@ -79,7 +79,7 @@
 		const msgBox = document.getElementById('msg-box');
 		const solveButton = document.getElementById('solve-button');
 		const redrawButton = document.getElementById('redraw-button');
-		const stopButton =  document.getElementById('stop-button');
+		const stopButton = document.getElementById('stop-button');
 		const selectBox = document.getElementById('select-box');
 
 		// 実行モード
@@ -296,7 +296,7 @@
 				// {once: true} の効果で、ハンドラは実行後に自動削除される
 				stopButton.addEventListener("click", clickHandler, { once: true });
 
-				// clickHandler() はここで宣言（function は後方参照可）
+				// clickHandler() はここで宣言してよい（function は後方参照可）
 				function clickHandler() {
 					clearTimeout(timerID);
 					resolve(false);
