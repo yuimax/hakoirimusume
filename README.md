@@ -1,6 +1,6 @@
 # 箱入り娘
 * JavaScriptで書いた「箱入り娘」パズルのソルバー
-* Google Gemini が生成したコードを改良したもの
+* Google Gemini が生成したコードを改良
 * 実行例＞ <https://yuima.neocities.org/hakoirimusume/>
 
 ## 参考サイト
