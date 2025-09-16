@@ -269,10 +269,10 @@
 		function getState(pieces) {
 			const stats = Array(WIDTH * HEIGHT).fill(0);
 			for (const p of pieces) {
-				const points = getGridPoints(p.x, p.y, p.shape.w, p.shape.h);
+				const points = getGridPoints(p.x - 1, p.y - 1, p.shape.w, p.shape.h);
 				const type = p.shape.type;
 				for (const [x, y] of points) {
-					stats[(y - 1) * WIDTH + (x - 1)] = type;
+					stats[y * WIDTH + x] = type;
 				}
 			}
 			return stats.join('');
