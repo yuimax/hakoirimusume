@@ -10,7 +10,17 @@
 			max-width: 360px;
 			margin: 0 auto;
 		}
+		
+		#header {
+			display: flex;
+			align-items: baseline;
+		}
 
+		#header a {
+			font-size: 150%;
+			font-weight: bold;
+		}
+		
 		#game-board {
 			display: grid;
 			grid-template-columns: repeat(4, 80px);
@@ -56,7 +66,10 @@
 </head>
 <body>
 	<div id="main">
-		<h1>【箱入り娘】<small><a href="https://github.com/yuimax/hakoirimusume">source</a></small></h1>
+		<div id="header">
+			<h1>【箱入り娘】</h1>
+			<a href="https://github.com/yuimax/hakoirimusume">source</a>
+		</div>
 		<div id="game-board"></div>
 		<div id="msg-box"></div>
 		<div id="control-panel">
@@ -527,8 +540,8 @@
 				}
 				// 駒を動かす
 				for (const dp of moveSequence) {
-					// 動かす前に250ミリ秒待機する
-					if (!await waiter(250)) {
+					// 動かす前に125ミリ秒待機する
+					if (!await waiter(125)) {
 						stopped = true;
 						break outerloop;
 					}
